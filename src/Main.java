@@ -46,7 +46,7 @@ public class Main {
             totalSavings1 += amountMonth * percent;
             month++;
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSavings + " рублей");
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSavings1 + " рублей");
             }
         }
 
@@ -65,14 +65,15 @@ public class Main {
         }
 
 
-        int depositAmount2 = 15000;
-        int bid2 = 7;
-        int time = 108;
-        for (int i = 0; i < time; i = i + 6) {
-            depositAmount2 += depositAmount2 * bid2 / 100;
-            if (time % 6 == 0) ;
+        double depositAmount2 = 15000; // Используем double для точности
+        double bid2 = 7; // Процентная ставка
+        int time = 108; // Время в месяцах
+        for (int i = 0; i < time; i += 6) {
+            depositAmount2 += depositAmount2 * bid2 / 100; // Увеличиваем сумму на процент
             System.out.println("Через " + (i + 6) + " месяцев сумма накоплений: " + depositAmount2 + " рублей");
         }
+
+
 
 
         int firstFriday = 5;
@@ -80,6 +81,8 @@ public class Main {
         for (int day = firstFriday; day <= daysInMonth; day += 7) {
             System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет.");
         }
+
+
 
 
         int currentYear =2025;
